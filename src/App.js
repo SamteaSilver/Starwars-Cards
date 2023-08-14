@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { API } from './services/API';
+import StarShipCard from './components/StarShipCard'
+import './style.css'
+export default function App() {
 
-function App() {
+  const [ships, setShips] = useState([])
+
+  useEffect(() => {
+    API().then((data) => {
+      setShips(data.results)
+    })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* {ships && ships.map((ship) => {
+        return <li>{ship.name}</li>
+      })} */}
+
+      {ships && ships.map((ship, index) => {
+        return (
+          <StarShipCard
+            key={index}
+            name={ship.name}
+
+          />
+        )
+      })}
     </div>
   );
 }
-
-export default App;
