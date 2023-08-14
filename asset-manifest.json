@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Starwars-Cards/static/css/main.f1b295ab.css",
+    "main.js": "/Starwars-Cards/static/js/main.47fd08c6.js",
+    "index.html": "/Starwars-Cards/index.html",
+    "main.f1b295ab.css.map": "/Starwars-Cards/static/css/main.f1b295ab.css.map",
+    "main.47fd08c6.js.map": "/Starwars-Cards/static/js/main.47fd08c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1b295ab.css",
+    "static/js/main.47fd08c6.js"
+  ]
+}
